@@ -45,10 +45,17 @@ function addImage(imageURL){
     document.body.insertBefore(button, addAvatarButton);
  console.log(closeIcon);
 
+ //removing the image
  closeIcon.addEventListener('click', function deleteImage(){
-    
-    button.parentNode.removeChild(button);
-    
+  
+    let txt;
+  if (confirm("Are you sure!")) {
+    txt = button.parentNode.removeChild(button)
+  } else {
+    txt = "You pressed Cancel!";
+  }
+
+
     });   
 
 }
